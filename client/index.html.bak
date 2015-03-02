@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<p> Hello everyone!!!</p>
+<p> Hello Praful !!!</p>
 
 <!--Meetups -->
 <div ng-controller="meetupscontroller">
