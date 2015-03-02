@@ -5,18 +5,11 @@ app 			  = express(),
 bodyParser        = require('body-parser'),
 mongoose          = require ('mongoose'),
 meetupscontroller = require('./server/controllers/meetups-controller-server');
-/*
-app.get('/', function(req,res)
-{
-console.log('value of ******** dirname: ', __dirname);
-res.sendFile(__dirname + '/client');
-});
 
-*/
 
-mongoose.connect('mongodb://localhost:27017/mean-demo');
+mongoose.connect('mongodb://root:root@ds061558.mongolab.com:61558/mean-demo');
 app.use(bodyParser());
-console.log('value of ******** dirname: ', __dirname);
+//console.log('value of ******** dirname: ', __dirname);
 app.use(express.static(__dirname +'/client'));
 
 app.get('/api/meetups' ,meetupscontroller.list);
